@@ -80,12 +80,47 @@ step3 : '$' + 처음 3자리 + 총 글자 수 + url 의 14번째 문자.        
 ※ url 의 14번째 문자가 존재하지 않을 때는 ? 문자로 표시.            =>      $dau4?
 */
 
-let url = 'http://daum.net';
+// let url = 'http://daum.net';
 
-let step1, step2, step3;
-step1 = url.split('//')[1];
-console.log(step1);
+// let step1, step2, step3;
+// step1 = url.split('//')[1];
+// step2 = step1.split('.')[0];
 
-step2 = step1.split('.')[0];
-console.log(step2);
+// if (url.length >= 13) {
+//     step3 = url.slice(13, 14);
+//     console.log('$' + step2.slice(0, 3) + step2.length + step3);
+// } else {
+//     console.log('$' + step2.slice(0, 3) + step2.length + '?');
 
+// }
+
+
+/* 
+    < 문제 >
+
+- 입력받은 값이 숫자인지 아닌지를 평가하는 프로그램 구현.
+  숫자 입력 시 입력없이 "확인" 버튼을 누르거나 "취소" 버튼을 누르는
+  상황에 대한 예외 처리는 제외.
+*/
+
+let num = prompt("숫자 입력: ");
+num = num.trim();
+
+if (confirm('입력된 숫자가 맞습니까?')) {
+    let val = num.split('');
+
+    for (let i = 0, tes; i < val.length; i++) {
+        tes = Number(val[i]);
+
+        if (isNaN(tes)) {
+            alert('숫자가 아닙니다. 프로그램을 종료합니다.');
+            break;
+        }
+        if (i === val.length - 1) {
+            alert('입력한 값이 숫자가 맞습니다.');
+        }
+    }
+
+} else {
+    alert('사용자가 취소했습니다. 프로그램을 종료합니다.');
+}

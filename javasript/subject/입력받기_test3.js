@@ -29,13 +29,13 @@
 let names, age, number;
 while (true) {
     names = prompt('이름: ');
-    names = names ?? '미입력';
+    names = names.trim() ?? '미입력';
 
     age = prompt('나이: ');
-    age = age ?? '미입력';
+    age = age.trim() ?? '미입력';
 
     number = prompt('연락처: ');
-    number = number ?? '미입력';
+    number = number.trim() ?? '미입력';
 
     if ((names && age && number) == '미입력' || (names && age && number) == '') {
         alert('고객명 나이 연락처가 모두 입력 되어야 합니다.');

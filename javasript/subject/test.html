@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <script src="./마름모.js"></script> -->
-    <script src="./입력받기_test3.js"></script>
+    <!-- <script src="./입력받기_test3.js"></script> -->
+
     <style>
         body {
             font-family: "굴림체";
@@ -27,7 +28,40 @@
 </head>
 
 <body>
+    <script>
+        function calculate() {
+            var studentName = prompt("학생명을 입력하세요:");
+            var koreanScore = parseInt(prompt("국어 점수를 입력하세요 (0 ~ 100):"));
+            var englishScore = parseInt(prompt("영어 점수를 입력하세요 (0 ~ 100):"));
+            var mathScore = parseInt(prompt("수학 점수를 입력하세요 (0 ~ 100):"));
 
+            var totalScore = koreanScore + englishScore + mathScore;
+            var averageScore = Math.trunc(totalScore / 3);
+
+            var table = document.createElement("table");
+
+            var caption = table.createCaption();
+            caption.textContent = "학생 성적";
+
+            var headerRow = table.insertRow();
+            var headers = ["학생명", "국어", "영어", "수학", "합계", "평균"];
+            for (var i = 0; i < headers.length; i++) {
+                var headerCell = headerRow.insertCell();
+                headerCell.textContent = headers[i];
+            }
+
+            var dataRow = table.insertRow();
+            var data = [studentName, koreanScore, englishScore, mathScore, totalScore, averageScore];
+            for (var j = 0; j < data.length; j++) {
+                var dataCell = dataRow.insertCell();
+                dataCell.textContent = data[j];
+            }
+
+            document.body.appendChild(table);
+        }
+
+        calculate(); // 페이지가 로드되면 자동으로 실행
+    </script>
 
 </body>
 

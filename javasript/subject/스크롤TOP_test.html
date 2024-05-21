@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTop 버튼 만들기</title>
+
+    <style>
+        body {
+            width: 1000px;
+            position: relative;
+        }
+
+        .scrollTop {
+            display: fixed;
+            visibility: hidden;
+            background-color: bisque;
+            opacity: 0;
+            transition: opacity 0.3s;
+            width: 100px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+            line-height: 35px;
+            color: red;
+        }
+
+        .scrollTop:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <script defer src="./스크롤TOP_test.js"></script>
+</head>
+
+<body>
+    <h1>ScrollTop 버튼 만들기</h1>
+    <hr>
+
+    <div class="scrollTop">Top</div>
+
+    <ul id="nav">
+        <li>
+            <h3><a href="#" class="menu mail">메일</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu cafe">카페</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu blog">블로그</a></h3>
+        </li>
+        <li>
+            <h3><a href="#" class="menu knowledge">지식in</a></h3>
+        </li>
+    </ul>
+    <hr>
+    <input type="button" value="다음">
+
+    <div>
+        <p>
+            First ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam
+            esse expedita deleniti?
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+        </p>
+        <p>
+            Second ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+        </p>
+        <p>
+            Third ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+        </p>
+        <p>
+            Fourth ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+        </p>
+        <p>
+            Fifth ipsum dolor sit amet consectetur adipisicing elit. Esse nisi facere excepturi. Officiis soluta,
+            assumenda
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+            aliquam dicta ipsum culpa dolorem quae porro. Odit, temporibus? Pariatur voluptatibus est maiores aspernatur
+            rem?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem culpa temporibus provident qui pariatur
+            voluptatem
+            consectetur modi ipsam repellendus excepturi. Officiis eos repellat similique minus magni magnam esse
+            expedita deleniti?
+        </p>
+        <div id="up"><button value="top">top</button></div>
+    </div>
+
+</body>
+
+</html>

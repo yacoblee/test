@@ -6,42 +6,44 @@ document.addEventListener('scroll', () => {
     let upper = document.querySelector('.scrollTop');
 
     if (posY < heights) {
+
         upper.style.opacity = '0';
         setTimeout(() => {
-            upper.style.visibility = 'hidden';
+            if (window.scrollY < heights) {
+                upper.style.visibility = 'hidden';
+            }
         }, 300);
-    } else {
+
         upper.style.visibility = 'visible';
         upper.style.opacity = '1';
     }
 
     upper.addEventListener('click', () => {
-        let startPos = window.scrollY;
-        let duration = 500;
-        let startTime = null;
+        let posY = window.scrollY;
 
-        function scrollAnimation(currentTime) {
-            if (!startTime) startTime = currentTime;
-            let timeElapsed = currentTime - startTime;
+        let stopTimeout = setInterval(() => {
 
-            let run = ease(timeElapsed, startPos, -startPos, duration);
+            window.scroll(0, posY -= 5);
 
-            window.scrollTo(0, run);
+            if (posY <= 0) {
+                clearInterval(stopTimeout);
+                window.scroll(0, 0);
+            }
 
-            if (timeElapsed < duration) requestAnimationFrame(scrollAnimation);
-        }
+        }, 5);
+    });
 
-        function ease(t, b, c, d) {
-            t /= d / 2;
-            if (t < 1) return c / 2 * t * t + b;
-            t--;
-            return -c / 2 * (t * (t - 2) - 1) + b;
-        }
+    upper.addEventListener('mouseenter', () => {
+        upper.style.transform = 'scale(1.1)';
+        upper.style.opacity = '0.8';
+        upper.style.cursor = 'pointer';
+    });
 
-        requestAnimationFrame(scrollAnimation);
+    upper.addEventListener('mouseleave', () => {
+        upper.style.transform = 'scale(1)';
+        upper.style.opacity = '1';
     });
 });
-
 
 
 

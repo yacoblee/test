@@ -11,21 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let lastClickTime = 0;
 
-    // function handleClick(e) {
-    //     const currentTime = new Date().getTime();
-    //     const timeDiff = currentTime - lastClickTime;
-
-    //     if (timeDiff < 500) {
-    //         e.preventDefault();
-    //         return;
-    //     }
-    //     lastClickTime = currentTime;
-
-    // }
 
     rightButton.addEventListener("click", function (e) {
         if (currentIndex < maxIndex) {
-
             const currentTime = new Date();
             const timeDiff = currentTime - lastClickTime;
             if (timeDiff < 700) {
@@ -68,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    let slideTime = setInterval(inter, 1000);
-    ullist.addEventListener('mouseover', function () {
+    let slideTime;
 
-        slideTime;
+    ullist.addEventListener('mouseover', function () {
+        slideTime = setInterval(inter, 1000);
     });
 
     ullist.addEventListener('mouseout', function () {

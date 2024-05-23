@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언(Accordion)</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100vw;
+            background-color: beige;
+        }
+
+        .logo_page {
+            display: grid;
+            grid-template: 30vw 25vw / 1fr;
+            width: 50vw;
+            height: 50vw;
+            margin: 0 auto;
+            margin-top: 2vw;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        .logo_page img {
+            display: grid;
+            grid-area: 1/1/1/1;
+            margin: auto;
+            object-fit: cover;
+            width: 38vw;
+            height: auto;
+        }
+
+        .logo_page p {
+            grid-area: 2/1/2/1;
+            top: 0;
+            width: 38vw;
+            margin: 0 auto;
+            word-break: break-all;
+        }
+
+        .service_container {
+            display: grid;
+            width: 50vw;
+            height: 70vw;
+            grid-template: 40px 1fr / repeat(4, 1fr);
+            margin: auto;
+            margin-top: 2vw;
+            position: relative;
+
+        }
+
+        .service_container ul {
+            position: relative;
+            grid-area: 2/1/2/ span 3;
+        }
+
+
+        .service_list {
+            list-style-type: none;
+            width: 48vw;
+            word-break: break-all;
+            background-color: rgba(255, 228, 196, 0.205);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .service_header {
+            background-color: rgba(0, 0, 0, 0.336);
+            color: white;
+            padding: 10px;
+        }
+
+        .btn_collapseAll {
+            position: absolute;
+            right: 2vw;
+            width: max-content;
+            color: blue;
+        }
+
+        .hidden .service_body {
+            display: none;
+        }
+    </style>
+
+
+
+    <script defer src="./탭기능.js"></script>
+</head>
+
+<body>
+    <section class="logo_page">
+        <img src="../image/starbucks_logo.jpg" alt="starbucks_logo">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quo dicta labore debitis, quis aut tenetur
+            autem optio repudiandae deleniti? Officiis amet pariatur culpa blanditiis nostrum dolorum atque, aut
+            perferendis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quo dicta labore debitis, quis aut tenetur
+            autem optio repudiandae deleniti? Officiis amet pariatur culpa blanditiis nostrum dolorum atque, aut
+            perferendis.
+        </p>
+    </section>
+
+    <section class="service_container">
+        <h1>Service</h1>
+
+        <ul>
+            <li class="service_list">
+                <p class="service_header">- Lorem ipsum dolor sit amet.</p>
+                <p class="service_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis nam
+                    deleniti? A enim iusto facere
+                    vero ipsum aliquam id voluptas fugiat dolorum. Odio dolorum rem impedit minus, vel ex.</p>
+            </li>
+            <li class="service_list hidden">
+                <p class="service_header">+ Lorem ipsum dolor sit amet.</p>
+                <p class="service_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis nam
+                    deleniti? A enim iusto facere
+                    vero ipsum aliquam id voluptas fugiat dolorum. Odio dolorum rem impedit minus, vel ex.</p>
+            </li>
+            <li class="service_list hidden">
+                <p class="service_header">+ Lorem ipsum dolor sit amet.</p>
+                <p class="service_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis nam
+                    deleniti? A enim iusto facere
+                    vero ipsum aliquam id voluptas fugiat dolorum. Odio dolorum rem impedit minus, vel ex.</p>
+            </li>
+            <li class="service_list hidden">
+                <p class="service_header">+ Lorem ipsum dolor sit amet.</p>
+                <p class="service_body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis nam
+                    deleniti? A enim iusto facere
+                    vero ipsum aliquam id voluptas fugiat dolorum. Odio dolorum rem impedit minus, vel ex.</p>
+            </li>
+        </ul>
+
+        <button class="btn_collapseAll">COLLAPSE ALL</button>
+    </section>
+</body>
+
+</html>

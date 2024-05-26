@@ -44,28 +44,3 @@ document.addEventListener('scroll', () => {
         upper.style.opacity = '1';
     });
 });
-
-
-
-
-// if (posY > heights) {
-//     upper.style.visibility = 'visible';
-
-//     upper.addEventListener('click', () => {
-//         backScroll(() => window.scroll(0, posY -= 5));
-//     });
-// }
-
-// function backScroll(backSc) {
-//     let stopTimeout = setInterval(() => {
-//         backSc();
-//         if (posY <= 0) {
-//             clearInterval(stopTimeout);
-//         }
-//     }, 5);
-// }
-
-// clearTimeout(stop);
-// stop = setTimeout(() => {
-
-// }, 5000);

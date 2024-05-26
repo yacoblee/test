@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     let serv = document.querySelector('ul');
-    let serIndex = 0;
     let butt = document.querySelector('.btn_collapseAll');
 
     let plus = '+ Lorem ipsum dolor sit amet.'
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceList.classList.add('hidden');
         }
     });
+
 
     butt.addEventListener('click', () => {
         dels();

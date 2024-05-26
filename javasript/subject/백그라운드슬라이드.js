@@ -4,13 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightButton = document.querySelector(".btn_foward");
 
     let currentIndex = 0;
-    const maxIndex = Math.max(Math.ceil(regions.length) - 1, 0); //4
-
-    updateButtonVisibility();
-
+    // const maxIndex = Math.max(Math.ceil(regions.length) - 1, 0); //4
     let lastClickTime = 0;
-
-
 
     let data = ['../image/bg1.jpg',
         '../image/bg2.jpg',

@@ -59,11 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
             count++;
         }
     });
-
-
-
-
-
-    // downBtn
-
 });

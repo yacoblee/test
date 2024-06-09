@@ -42,12 +42,15 @@ header {
     transition: opacity 0.5s ease;
 }
 
-.active {
+.active,
+.active .header_nav p {
     background-color: white;
     transition-duration: 0.5s;
     transition-timing-function: ease;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.795);
 }
 
 .deactive {
@@ -63,7 +66,7 @@ header {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     width: 80%;
-    position: static;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -80,6 +83,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.header_center p {
+    text-indent: -9999px;
+}
+
+.header_center {
+    width: 200px;
+    height: 80px;
+    background: url(./mainlogo.png);
+    background-position: center;
+    background-size: cover;
 }
 
 nav ul {
@@ -113,6 +130,7 @@ nav ul {
 
 
 .section {
+    min-width: 100vw;
     width: 100vw;
     height: 55vw;
     display: flex;
@@ -122,6 +140,33 @@ nav ul {
     color: white;
     position: relative;
     transition: transform 1s ease-out;
+}
+
+video {
+    width: 100vw;
+    position: fixed;
+}
+
+.main_section {
+    position: absolute;
+    display: grid;
+    height: auto;
+    width: 100%;
+    min-height: 525px;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-template-columns: 100%;
+
+}
+
+
+
+.main_section:nth-child(3) {
+    position: relative;
+    margin: 0px 0px 10px calc((100% - 980px)* 0.5);
+    left: 415px;
+    grid-area: 3 / 1 / 4 / 2;
+    justify-self: start;
+    align-self: start;
 }
 
 #section1 {
